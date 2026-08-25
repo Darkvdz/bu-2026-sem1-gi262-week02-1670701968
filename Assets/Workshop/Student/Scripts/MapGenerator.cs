@@ -11,6 +11,8 @@ namespace Workshop.Student
         public GameObject[] floorTiles;
         public GameObject[] wallTiles;
         public GameObject[] foodTiles;
+        
+        
 
         public string[,] saveItemMap = new string[3, 3] {
             { " ", "Soda", " "},
@@ -18,10 +20,12 @@ namespace Workshop.Student
             { " ", " ", "Food"},
         };
 
-        // 1. declare Players variable
+        // 1. declare Players variable 2 ตัว
 
-        // 7. declare Exit variable 
+        // 7. declare Exit variable 1 ตัว
 
+
+    
 
         public void Start()
         {
