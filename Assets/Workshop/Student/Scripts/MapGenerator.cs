@@ -11,8 +11,8 @@ namespace Workshop.Student
         public GameObject[] floorTiles;
         public GameObject[] wallTiles;
         public GameObject[] foodTiles;
-        
-        
+        public GameObject[] obstaclesTiles;
+
 
         public string[,] saveItemMap = new string[3, 3] {
             { " ", "Soda", " "},
@@ -21,17 +21,25 @@ namespace Workshop.Student
         };
 
         // 1. declare Players variable 2 ตัว
+        public GameObject[] player;
 
         // 7. declare Exit variable 1 ตัว
+        public GameObject[] exitSign;
 
-
-    
 
         public void Start()
         {
             // 1. random player at the position <0, 0> map //อยู่จุดเริ่มต้น
+            int p = UnityEngine.Random.Range(0, player.Length);
+            Instantiate(player[p], new Vector2(0, 0), Quaternion.identity);
 
             // 2. create obstacless //สร้างอยู่ตรงกลาง
+
+            int o = UnityEngine.Random.Range(0, obstaclesTiles.Length);
+            for (int y = 0; y < rows/2; y++)
+            {
+                Instantiate(obstaclesTiles[o], new Vector2(columns / 2, y), Quaternion.identity);
+            }
 
             // 3. create floor
             for (int y = 0; y < rows; y++)
@@ -76,7 +84,7 @@ namespace Workshop.Student
                 for (int x = 0; x < saveItemMap.GetLength(1); x++)
                 {
                     string item = saveItemMap[y, x];
-                    if (!string.IsNullOrEmpty(item))
+                    if (!string.IsNullOrWhiteSpace(item))
                     {
                         foreach (var foodTile in foodTiles)
                         {
@@ -93,6 +101,7 @@ namespace Workshop.Student
             }
 
             // 7. place exit //อยุ่ขวาบนสุด
+            Instantiate(exitSign[0], new Vector2(columns - 1, rows - 1), Quaternion.identity);
 
         }
     }
