@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using UnityEngine.UIElements;
+using static UnityEngine.Rendering.DebugUI.Table;
 
 namespace Assignment
 {
@@ -11,7 +13,7 @@ namespace Assignment
         public void Start()
         {
             AS01_RandomItemDrop();
-            // AS02_NestedLoopForCreate2DMap();
+             AS02_NestedLoopForCreate2DMap();
             // AS03_NestedLoopForMakingWallAround();
             // AS04_AttackEnemy();
             // AS05_DynamicIterationLoop();
@@ -46,7 +48,9 @@ namespace Assignment
         public GameObject[] as01_items;
         public void AS01_RandomItemDrop()
         {
-            throw new NotImplementedException();
+            GameObject go = as01_items[UnityEngine.Random.Range(0, as01_items.Length)];
+            Instantiate(go, new Vector2(0, 0), Quaternion.identity);
+            Debug.Log($"Got item: {go.name}");
         }
 
         /*
@@ -108,7 +112,26 @@ namespace Assignment
         public int as02_rows;
         public void AS02_NestedLoopForCreate2DMap()
         {
-            throw new NotImplementedException();
+            Debug.Log("Column ...");
+            Debug.Log(as02_columns);
+            Debug.Log("Row ...");
+            Debug.Log(as02_rows);
+
+            for (int y = 0; y < as02_rows; y++)
+            {
+                string rowStr = ""; 
+                for (int x = 0; x < as02_columns; x++)
+                {
+                    int r = UnityEngine.Random.Range(0, as02_floorTiles.Length);
+                    GameObject tile = Instantiate(as02_floorTiles[r], new Vector2(x, y), Quaternion.identity);
+                   
+                    tile.name = r.ToString();
+                    Console.Write(tile.name);
+                    rowStr += tile.name;
+                }
+                Console.WriteLine();
+                Debug.Log(rowStr);
+            }
         }
 
         /*
