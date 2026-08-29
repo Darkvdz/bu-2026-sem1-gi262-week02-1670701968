@@ -174,12 +174,12 @@ MonoBehaviour:
   as02_columns: 10
   as02_rows: 10
   as03_wall: {fileID: 5291166318002269242, guid: 413c1aa8e8dffdd448102fbcf99aaf6d, type: 3}
-  as03_columns: 5
-  as03_rows: 3
-  as04_enemyHP: 0a000000140000001e000000
-  as04_damage: 5
-  as04_target: 2
-  as05_n: 3
+  as03_columns: 3
+  as03_rows: 5
+  as04_enemyHP: 0a0000000f00000014000000190000001e000000
+  as04_damage: 2
+  as04_target: 3
+  as05_n: 5
   as06_ironManSuitNames:
   - Mark I
   - Mark II
@@ -188,43 +188,43 @@ MonoBehaviour:
   - Mark V
   - Mark VI
   - Mark VII
-  as07_heroHPs: 0a000000140000001e000000
-  as07_heal: 5
+  as07_heroHPs: 010000000200000003000000
+  as07_heal: 10
   as07_targetIndex: 1
   as08_dialogues:
-  - "\u0E04\u0E38\u0E13\u0E40\u0E1B\u0E47\u0E19\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E44\u0E23\u0E1A\u0E49\u0E32\u0E07\u0E04\u0E23\u0E31\u0E1A"
+  - How are you?
   - "\u0E41\u0E25\u0E49\u0E27\u0E40\u0E08\u0E2D\u0E01\u0E31\u0E19\u0E43\u0E2B\u0E21\u0E48"
-  - "\u0E2A\u0E27\u0E31\u0E2A\u0E14\u0E35"
-  as09_n: 2
-  as10_n: 15
-  as11_enemyHPs: 0f0000001400000019000000
+  - Hello!
+  as09_n: 12
+  as10_n: 100
+  as11_enemyHPs: 0f00000014000000190000001900000019000000190000001900000019000000190000001900000019000000190000001900000019000000190000001900000019000000190000001900000019000000190000001900000019000000190000001900000019000000190000001900000019000000190000001900000019000000190000001900000019000000190000001900000019000000190000001900000019000000190000001900000019000000190000001900000019000000190000001900000019000000
   as11_enemyPrefab: {fileID: 8402306337599026408, guid: 750804a3353a1434ab71f408a13e1b58, type: 3}
-  as12_countTime: 5
+  as12_countTime: 2
   as13_matrix:
     rows: 3
     cols: 3
     data: 010000000200000003000000040000000500000006000000070000000800000009000000
-  as13_row: 0
+  as13_row: 2
   as14_matrix:
     rows: 3
     cols: 3
     data: 010000000200000003000000040000000500000006000000070000000800000009000000
-  as14_column: 1
-  as15_size: 10
+  as14_column: 2
+  as15_size: 5
   ex01_board:
     rows: 3
     cols: 3
     data:
     - X
     - X
-    - O
-    - X
-    - O
-    - X
+    - 
+    - 0
+    - 0
+    - 
     - 
     - ' '
     - ' '
-  ex01_playerTurn: 1
+  ex01_playerTurn: X
   ex01_row: 0
   ex01_column: 2
 --- !u!1 &652921969
